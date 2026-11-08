@@ -1,0 +1,33 @@
+# Core data science
+pandas>=1.5.3
+numpy>=1.23.5
+scikit-learn>=1.2.2
+xgboost>=1.7.6
+imbalanced-learn>=0.10.1
+
+# Visualization
+matplotlib>=3.7.1
+seaborn>=0.12.2
+plotly>=5.14.1
+
+# Dashboard
+streamlit>=1.22.0
+
+# Explainability
+shap>=0.41.0
+
+# IBM Cloud - uses raw REST API calls via requests (no SDK needed)
+# ibm-watsonx-ai does not yet support Python 3.13+
+requests>=2.28.2
+
+# Utilities
+python-dotenv>=1.0.0
+joblib>=1.2.0
+scipy>=1.10.1
+
+# Testing
+pytest>=7.3.1
+pytest-cov>=4.0.0
+
+# Note: jupyter/ipykernel omitted - requires pyyaml which has no Python 3.15 wheel yet.
+# To use the EDA notebook, install separately:  pip install notebook ipykernel
