@@ -1,0 +1,86 @@
+{
+  "name": "AICTE-Predictive-Maintenance-Industrial-Machinery",
+  "title": "AI-Based Predictive Maintenance of Industrial Machinery",
+  "description": "AI-based predictive maintenance system for industrial machinery using ML and IBM Cloud Lite services to predict and classify machine failures from real-time sensor data.",
+  "version": "1.0.0",
+  "problem_statement": "Problem Statement No. 39 - Mechanical Engineering (Machine Learning Project)",
+  "domain": "Mechanical Engineering / Industrial IoT / Machine Learning",
+  "technology_stack": {
+    "language": "Python 3.10+",
+    "ml_libraries": ["scikit-learn", "xgboost", "imbalanced-learn"],
+    "visualization": ["plotly", "matplotlib", "seaborn"],
+    "dashboard": "streamlit",
+    "explainability": "shap",
+    "ibm_cloud": {
+      "services": [
+        "IBM Watson Machine Learning (Lite)",
+        "IBM Cloud Object Storage (Lite)",
+        "IBM Watson Studio",
+        "IBM Watson NLU",
+        "IBM watsonx.ai (Granite)"
+      ],
+      "project_id": "1b36f8d5-0bbb-4db1-a8e2-aecf9457aa5b"
+    }
+  },
+  "dataset": {
+    "source": "Kaggle",
+    "url": "https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification",
+    "records": 10000,
+    "features": 10,
+    "failure_rate": "3.39%",
+    "failure_types": [
+      "No Failure",
+      "Tool Wear Failure",
+      "Heat Dissipation Failure",
+      "Power Failure",
+      "Overstrain Failure",
+      "Random Failures"
+    ]
+  },
+  "ml_models": {
+    "binary_failure_detection": {
+      "best_model": "Random Forest",
+      "cv_f1_score": 0.9842,
+      "algorithms_compared": [
+        "Logistic Regression",
+        "Decision Tree",
+        "Random Forest",
+        "XGBoost"
+      ]
+    },
+    "failure_type_classification": {
+      "best_model": "XGBoost",
+      "cv_f1_score": 0.9954,
+      "algorithms_compared": [
+        "Logistic Regression",
+        "Decision Tree",
+        "Random Forest",
+        "XGBoost"
+      ]
+    }
+  },
+  "features_engineered": [
+    "Temp_Diff (Process Temp - Air Temp)",
+    "Power_W (Torque x RPM x 2pi/60)",
+    "Wear_Category (Tool Wear Bins)"
+  ],
+  "dashboard_pages": [
+    "Home - Project Overview + IBM Status",
+    "1 - Dataset Analysis (EDA)",
+    "2 - Failure Prediction (Live Input)",
+    "3 - Model Evaluation (Metrics)",
+    "4 - Explainable AI (SHAP)",
+    "5 - IBM Cloud Integration",
+    "6 - Sensor Analytics",
+    "7 - Maintenance Log Analyser"
+  ],
+  "github_repository": "https://github.com/adityainter1010-svg/AICTE-Predictive-Maintenance-Industrial-Machinery",
+  "run_instructions": {
+    "install": "pip install -r requirements.txt",
+    "train": "python -m src.train_model",
+    "run_dashboard": "streamlit run app.py",
+    "run_tests": "pytest tests/ -v"
+  },
+  "author": "AICTE Internship Project",
+  "created": "2026-11-09"
+}
